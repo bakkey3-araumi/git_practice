@@ -7,18 +7,17 @@ def provide_hint(secret, guess):
     secret_str = str(secret)
     guess_str = str(guess)
     
-    # 各数字の出現回数をカウントするための辞書
     secret_count = {}
     guess_count = {}
     
-    # 秘密の数字のカウント
+    #secret_str内の数字をカウントする
     for digit in secret_str:
         if digit in secret_count:
             secret_count[digit] += 1
         else:
             secret_count[digit] = 1
     
-    # ユーザーの入力のカウント
+    #guess_str内の数字をカウントする
     for digit in guess_str:
         if digit in guess_count:
             guess_count[digit] += 1
